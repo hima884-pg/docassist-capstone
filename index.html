@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocAssist - Medical Decision Support</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">DocAssist - Medical Decision Support</h2>
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="haematocrit">HAEMATOCRIT (%):</label>
+                <input type="text" class="form-control" id="haematocrit" name="haematocrit" required>
+            </div>
+            <div class="form-group">
+                <label for="haemoglobin">HAEMOGLOBIN (g/dL):</label>
+                <input type="text" class="form-control" id="haemoglobin" name="haemoglobin" required>
+            </div>
+            <div class="form-group">
+                <label for="erythrocyte">ERYTHROCYTE (million cells/mcL):</label>
+                <input type="text" class="form-control" id="erythrocyte" name="erythrocyte" required>
+            </div>
+            <div class="form-group">
+                <label for="leucocyte">LEUCOCYTE (cells/mcL):</label>
+                <input type="text" class="form-control" id="leucocyte" name="leucocyte" required>
+            </div>
+            <div class="form-group">
+                <label for="thrombocyte">THROMBOCYTE (cells/mcL):</label>
+                <input type="text" class="form-control" id="thrombocyte" name="thrombocyte" required>
+            </div>
+            <div class="form-group">
+                <label for="mch">MCH (pg):</label>
+                <input type="text" class="form-control" id="mch" name="mch" required>
+            </div>
+            <div class="form-group">
+                <label for="mchc">MCHC (g/dL):</label>
+                <input type="text" class="form-control" id="mchc" name="mchc" required>
+            </div>
+            <div class="form-group">
+                <label for="mcv">MCV (fL):</label>
+                <input type="text" class="form-control" id="mcv" name="mcv" required>
+            </div>
+            <div class="form-group">
+                <label for="age">AGE (years):</label>
+                <input type="text" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="sex">SEX:</label>
+                <select class="form-control" id="sex" name="sex" required>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        {% if prediction %}
+        <div class="mt-5">
+            <h4>Predicted Treatment Outcome:</h4>
+            <p>{{ prediction }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

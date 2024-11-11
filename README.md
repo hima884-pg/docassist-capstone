@@ -37,7 +37,6 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/yourusername/docassist.git
 cd docassist
 2. Install Dependencies
 Create a virtual environment and install the necessary dependencies from the requirements.txt:
@@ -102,3 +101,5 @@ Future Work
 Explainable AI (XAI): Implement techniques like SHAP or LIME to provide better interpretability of the model.
 Integration with Healthcare Systems: Integrate the decision support system with existing healthcare IT infrastructure for real-world deployment.
 Patient Feedback: Incorporate patient feedback to improve the recommendations over time.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
